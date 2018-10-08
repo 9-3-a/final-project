@@ -6,7 +6,8 @@ const Wines = [
         Type: 'Sauvignon Blanc',
         Color: 'White',
         customerPrice: '24',
-        unitCost: '19.95' 
+        unitCost: '19.95',
+        imageSource: 'cakebread.png' 
     },
     {
         wine_id: 'w2',
@@ -16,6 +17,7 @@ const Wines = [
         Color: 'White',
         customerPrice: '13',
         unitCost: '10.5',
+        imageSource: 'daou.jpg'
     },
     {
         wine_id: 'w3',
@@ -24,7 +26,8 @@ const Wines = [
         Type: 'Gris Blanc Rosé',
         Color: 'Rosé',
         customerPrice: '11',
-        unitCost: '8.99'
+        unitCost: '8.99',
+        imageSource: 'gerard.jpg'
     },
     {
         wine_id: 'w4',
@@ -33,7 +36,8 @@ const Wines = [
         Type: 'Chardonnay',
         Color: 'White',
         customerPrice: '17',
-        unitCost: '13.78'
+        unitCost: '13.78',
+        imageSource: 'sonoma.png'
     },
     {
         wine_id: 'w5',
@@ -42,7 +46,8 @@ const Wines = [
         Type: 'Viognier',
         Color: 'White',
         customerPrice: '14',
-        unitCost: '13.20'
+        unitCost: '13.20',
+        imageSource: 'miner.png'
     },
     {
         wine_id: 'w6',
@@ -51,7 +56,8 @@ const Wines = [
         Type: 'Sauvignon Blanc',
         Color: 'White',
         customerPrice: '18',
-        unitCost: '14.99'
+        unitCost: '14.99',
+        imageSource: 'trinchero.png'
     },
     {
         wine_id: 'w7',
@@ -60,7 +66,8 @@ const Wines = [
         Type: 'Cabernet',
         Color: 'Red',
         customerPrice: '15',
-        unitCost: '12.50'
+        unitCost: '12.50',
+        imageSource: 'carr.png'
     },
     {
         wine_id: 'w8',
@@ -69,7 +76,8 @@ const Wines = [
         Type: 'Cabernet Sauvignon',
         Color: 'Red',
         customerPrice: '20',
-        unitCost: '16.67'
+        unitCost: '16.67',
+        imageSource: 'justin.png'
     },
     {
         wine_id: 'w9',
@@ -78,7 +86,8 @@ const Wines = [
         Type: 'Pinot Noir',
         Color: 'Red',
         customerPrice: '16',
-        unitCost: '13.33'
+        unitCost: '13.33',
+        imageSource: 'elouan.png'
     },
     {
         wine_id: 'w10',
@@ -87,7 +96,8 @@ const Wines = [
         Type: 'Valpolicella',
         Color: 'Red',
         customerPrice: '14',
-        unitCost: '11'
+        unitCost: '11',
+        imageSource: 'tommasi.jpg'
     },
     {
         wine_id: 'w11',
@@ -96,7 +106,8 @@ const Wines = [
         Type: 'Red Blend',
         Color: 'Red',
         customerPrice: '15',
-        unitCost: '12'
+        unitCost: '12',
+        imageSource: 'siena.jpg'
     },
     {
         wine_id: 'w12',
@@ -105,6 +116,7 @@ const Wines = [
         Type: 'Zinfandel',
         Color: 'Red',
         customerPrice: '20',
-        unitCost: '16'
+        unitCost: '16',
+        imageSource: 'saldo.png'
     }
 ]
