@@ -1,31 +1,57 @@
-import React from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-class Login extends React.Component {
+class SignInForm extends Component {
+    constructor() {
+        super();
 
-    state = {}
+        this.state = {
+            email: '',
+            password: ''
+        };
 
-    setValue(e) {
-        this.setState({[e.target.name]: e.target.value})
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    login() {
-        axios.post('/users/login', this.state).then((res) => {
-            localStorage.setItem('token', res.data.token)
-            window.location.pathname = '/home';
-        })
+    handleChange(e) {
+        let target = e.target;
+        let value = target.type === 'checkbox' ? target.checked : target.value;
+        let fullName = target.name;
+
+        this.setState({
+            [fullName] : value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        console.log('The form was submitted with the following data:');
+        console.log(this.state);
     }
 
     render() {
-        return (
-            <span>
-                <h1>Login</h1>
-                <input type="text" name="email" placeholder="email" onChange={(e) => this.setValue(e)} />
-                <input type="text" name="password" placeholder="password" onChange={(e) => this.setValue(e)} />
-                <button onClick={() => this.login()}>LOGIN</button>
-            </span>
-        )
+        return(
+            <div className="FormCenter">
+                <form onSubmit={this.handleSubmit} className="FormFields">
+                <div className="FormField">
+                    <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
+                    <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" onChange={this.handleChange} />
+                </div>
+
+                <div className="FormField">
+                    <label className="FormField__Label" htmlFor="password">Password</label>
+                    <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" onChange={this.handleChange} />
+                </div>
+
+                <div className="FormField">
+                    <button className="FormField__Button mr-20">Sign In</button> <Link to="/" clasaName="FormField__Link">Create an Account</Link>
+                </div>
+                </form>
+            </div>
+        );
     }
 }
 
-export default Login;
+export default SignInForm; 
