@@ -24,6 +24,7 @@ mongoose.connect(keys.mongoURI, {
 
 // PRODUCTION ONLY
  app.use(express.static(path.join(__dirname, 'client/build')));
+ app.use(express.static(path.join(__dirname, 'public')));
 
 // app middleware
 app.use(bodyParser.json())
@@ -31,8 +32,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 const wineRoutes = require('./routes/wines');
+const reviewRoutes = require('./routes/review');
 
 app.use('/wines',  wineRoutes);
+app.use('/review',  reviewRoutes);
 
 //mongoose.connect('mongodb://haloos2:apple112@ds155292.mlab.com:559/2dio')
 // PRODUCTION ONLY

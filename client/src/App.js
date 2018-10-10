@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import Review from './screens/review';
+import Invetories from './screens/inventories';
 
 // new changes
 
@@ -12,9 +14,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header> */}
-        <h1 className="App-intro">
-        This is a test 1 
-        </h1>
+        <Invetories></Invetories>
       </div>
     );
   }
