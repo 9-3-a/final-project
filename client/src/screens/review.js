@@ -7,6 +7,7 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props.match.params.wineId);
         axios.get('/review')
             .then((res) => {
                 this.setState({reviews:res.data})
@@ -34,7 +35,7 @@ class Reviews extends React.Component {
                 console.log('No Success');
             })
             .catch((err) => console.log(err));
-            
+
         console.log(this.state);
     }
 

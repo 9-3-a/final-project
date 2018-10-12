@@ -8,16 +8,17 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import SignInForm from './screens/login';
 import SignUpForm from './screens/register';
 import Review from './screens/review';
+import Inventories from './screens/inventories';
 import NavbarFeatures from './components/navbar';
 
 
 ReactDOM.render(
                 <BrowserRouter>
-                    <NavbarFeatures/>
                     <Switch>
                         <Route path = "/signin" component={ SignInForm } />
                         <Route path = "/signup" component={ SignUpForm } />
-                        <Route path= "/review" component={Review} />
+                        <Route path = "/wines" component = {Inventories} />
+                        <Route path= "/review/:wineId" component={Review} />
                     </Switch>
                 </BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();

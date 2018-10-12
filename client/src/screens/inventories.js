@@ -23,6 +23,7 @@ class Inventories extends React.Component {
                             <h3>{wine.name}</h3>
                             <div className="wine-type">{wine.type}</div>
                             <img src={"/images/" + wine.image} alt={wine.name + ' Image'}/>
+                            <a href={"/review/" + wine._id}>CHECK OUT OUR REVIEWS</a>
                         </div>
                     );
                 })}
