@@ -14,11 +14,14 @@ import NavbarFeatures from './components/navbar';
 
 ReactDOM.render(
                 <BrowserRouter>
-                    <Switch>
-                        <Route path = "/signin" component={ SignInForm } />
-                        <Route path = "/signup" component={ SignUpForm } />
-                        <Route path = "/wines" component = {Inventories} />
-                        <Route path= "/review/:wineId" component={Review} />
-                    </Switch>
+                    <div>
+                        <NavbarFeatures />
+                        <Switch>
+                            <Route path = "/signin" component={ SignInForm } />
+                            <Route path = "/signup" component={ SignUpForm } />
+                            <Route path = "/wines" component = {Inventories} />
+                            <Route path= "/review/:wineId" component={Review} />
+                        </Switch>
+                    </div>
                 </BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();
