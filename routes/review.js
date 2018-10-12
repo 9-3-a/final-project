@@ -19,6 +19,7 @@ router.post('/', (req, res) => {
   newReview.name = req.body.name;
   newReview.rating = req.body.rating;
   newReview.review = req.body.review;
+  newReview.wine = req.body.wine;
 
   newReview.save((err) => {
     if(err) {

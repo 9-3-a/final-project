@@ -8,9 +8,9 @@ class Reviews extends React.Component {
 
     componentDidMount() {
         console.log(this.props.match.params.wineId);
-        axios.get('/review')
+        axios.get('/review/' + this.props.match.params.wineId)
             .then((res) => {
-                this.setState({reviews:res.data})
+                this.setState({reviews:res.data, wineId: this.props.match.params.wineId})
             })
             .catch((err) => console.log(err));
     }
@@ -25,7 +25,8 @@ class Reviews extends React.Component {
         axios.post('/review', {
                 name: this.state.username,
                 review: this.state.review,
-                rating: this.state.rating
+                rating: this.state.rating,
+                wine: this.state.wineId
             })
             .then((res) => {
                 if(res.data.success) {
