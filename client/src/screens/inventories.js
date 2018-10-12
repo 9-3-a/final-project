@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class Invetories extends React.Component {
+class Inventories extends React.Component {
     state = {
         wines: []
     }
@@ -31,4 +31,4 @@ class Invetories extends React.Component {
     }
 }
 
-export default Invetories;
+export default Inventories;
