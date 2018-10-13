@@ -10,6 +10,9 @@ import SignUpForm from './screens/register';
 import Review from './screens/review';
 import Inventories from './screens/inventories';
 import NavbarFeatures from './components/navbar';
+import AboutUs from './screens/about';
+
+
 
 
 ReactDOM.render(
@@ -21,6 +24,7 @@ ReactDOM.render(
                             <Route path = "/signup" component={ SignUpForm } />
                             <Route path = "/wines" component = {Inventories} />
                             <Route path= "/review/:wineId" component={Review} />
+                            <Route path= "/about" component= { AboutUs } />
                         </Switch>
                     </div>
                 </BrowserRouter>, document.getElementById('root'));

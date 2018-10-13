@@ -44,9 +44,9 @@ class Reviews extends React.Component {
         return (
             <div>
                 <form onSubmit={this.submitReview}>
-                    <input name="username" type="text" onChange={this.reviewUpdated} />
-                    <input name="rating" type="number" onChange={this.reviewUpdated} />
-                    <textarea name="review" onChange={this.reviewUpdated}></textarea>
+                    <input name="username" type="text" placeholder="Username" onChange={this.reviewUpdated} />
+                    <input name="rating" type="number" placeholder="Rating" onChange={this.reviewUpdated} />
+                    <textarea name="review" placeholder="Review" onChange={this.reviewUpdated}></textarea>
                     <input type="submit" value="What'd Ya Think?" />
                 </form>
                 <span>
