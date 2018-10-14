@@ -15,6 +15,7 @@ import Inventories from './screens/inventories';
 import NavbarFeatures from './components/navbar';
 import AboutUs from './screens/about';
 import Newsletter from './screens/newsletter';
+import ContactUs from './screens/contact'
 
 
 
@@ -30,6 +31,7 @@ ReactDOM.render(
                             <Route path= "/review/:wineId" component={Review} />
                             <Route path= "/about" component= { AboutUs } />
                             <Route path= "/newsletter" component= { Newsletter } />
+                            <Route path= "/contact" component= { ContactUs } />
                         </Switch>
                     </div>
                 </BrowserRouter>, document.getElementById('root'));
